@@ -1,0 +1,170 @@
+.table-wrapper {
+  max-height: 400px; /* Set maximum height for the table wrapper */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.table-wrapper table {
+  width: 100%; /* Ensure the table takes thez full width of its container */
+  border-collapse: collapse; /* Collapse border spacing */
+}
+
+.table-wrapper th,
+.table-wrapper td {
+  border: 1px solid #ddd; /* Add border to cells */
+  padding: 2px; /* Add padding to cells */
+  text-align: left; /* Align text to the left */
+}
+
+.table-wrapper th {
+  background-color: #f2f2f2; /* Add background color to header cells */
+}
+.smallInput {
+  width: 80px; /* reduced from 100px */
+}
+.mediumInput {
+  width: 120px; /* reduced from 200px */
+}
+.main {
+  margin: 10px auto; 
+  max-width: 100%; /* constrain width for better alignment */
+}
+.button {
+  display: flex;
+  align-items: center;
+}
+.popup {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(213, 200, 200, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center; /* Center the content horizontally */
+}
+
+.popup-content {
+  text-align: center;
+}
+
+.popup button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.popup button:hover {
+  background-color: #45a049;
+}
+.buttonb {
+  background-color: #04aa6d; /* Green */
+  border: none;
+  color: white;
+  padding: 4px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #04aa6d;
+  color: rgb(250, 247, 247);
+  border-radius: 2px;
+  margin: 10px 10px;
+}
+.date {
+  width: 110px; /* reduced from 140px */
+}
+input {
+  height: 26px; /* slightly smaller */
+  margin-top: 1px;
+  text-align: right;
+  text-indent: 5px;
+  font-size: 11pt; /* slightly smaller */
+  border-radius: 3px;
+  border: solid 1.5px #d3d3d3;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+input[type="text"]:hover {
+  box-shadow: 0 0 5pt 0.5pt #d3d3d3;
+}
+
+input[type="text"]:focus {
+  box-shadow: 0 0 5pt 2pt #d3d3d3;
+  outline-width: 0px;
+}
+input[type="date"]{
+  width:110px; /* keep date compact */
+}
+p {
+  margin: 1px;
+}
+/* Define the CSS style for mobile views */
+@media (max-width: 767px) {
+  .mobileviews {
+    width: 130px;
+  }
+}
+.bill-to {
+  height: auto;
+  max-height: 120px; /* keep compact */
+  overflow: auto;
+  width: 260px; /* slightly narrower */
+}
+.customer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.customer-select {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.customer-details {
+  flex: 1;
+}
+.single-row-grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(200px, 1fr);
+  gap: 16px;
+  overflow-x: auto;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+}
+
+input {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.rows{
+    display: grid;
+    grid-template-columns:2fr 1fr 1fr 1fr 1fr;
+    gap:10px;
+    overflow-x: auto;
+}
+
+/* Support class used in JSX (typo from code: mobilevies) */
+.mobilevies {
+  width: 120px;
+}

@@ -1,0 +1,325 @@
+/* Mobile Sale Entry Responsive Styles */
+.mobile-sale-container {
+	padding: 0px;
+	max-width: 100%;
+	margin: 0;
+	overflow: auto;
+}
+
+.mobile-sale-container > :first-child {
+	margin-top: 0;
+}
+
+.mobile-sale-container nav,
+.mobile-sale-container .navbar {
+	margin-bottom: 0;
+}
+
+.mobile-sale-container .main-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 240px;
+    gap:0px;
+}
+
+.mobile-sale-container .bill-details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 1px;
+    margin-bottom: 1px;
+}
+
+.mobile-sale-container .product-input-grid {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1px;
+}
+.mobile-sale-container .bill-top{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    margin-bottom: 1px;
+}
+
+
+
+
+
+
+.mobile-sale-container .customer-col {
+    flex: 0 0 180px;
+}
+
+.mobile-sale-container .bill-form{
+    width: 100%;
+    padding: 0rem;
+}
+
+
+
+.mobile-sale-container .customer-input {
+    width: 200px;
+    padding: 8px;
+    margin-bottom: 1px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.mobile-sale-container .bill-details-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.mobile-sale-container .readonly-input {
+    background-color: #f8f9fa;
+    color: #6c757d;
+}
+
+.mobile-sale-container .add-button {
+    padding: 2px 8px;
+    margin-top: 1px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.mobile-sale-container .add-button:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+}
+
+.mobile-sale-container .submit-button {
+    padding: 4px 8px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 1px 0;
+}
+
+.mobile-sale-container .action-buttons {
+    display: flex;
+    gap: 1px;
+    margin: 1px 0;
+    flex-wrap: wrap;
+}
+
+.mobile-sale-container .action-button {
+    padding: 4px 8px;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.mobile-sale-container .action-button:disabled {
+    background-color: #dee2e6;
+    cursor: not-allowed;
+}
+
+.mobile-sale-container .sidebar {
+    max-height: 300px;
+    overflow: auto;
+    /* margin-top: 20px; */
+    min-height: 300px;
+}
+
+.mobile-sale-container .date-filter {
+    /* margin-bottom: 10px;
+    padding: 8px; */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.mobile-sale-container .sidebar-table {
+    width: 100%;
+    font-size: 0.95em;
+    border-collapse: collapse;
+}
+
+.mobile-sale-container .sidebar-table th,
+.mobile-sale-container .sidebar-table td {
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.mobile-sale-container .sidebar-table th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+
+.mobile-sale-container .icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 2px;
+}
+
+.mobile-sale-container .icon-button:hover {
+    background-color: #f8f9fa;
+    border-radius: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .mobile-sale-container .main-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    /* Bill top stacks vertically on mobile */
+    .mobile-sale-container .bill-top {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        align-items: stretch;
+    }
+    .mobile-sale-container .bill-top > div {
+        width: 100%;
+    }
+    .mobile-sale-container .bill-top .customer-input{
+        width: 250px;
+    }
+    .mobile-sale-container .bill-top input[type="date"] {
+        width: 150px;
+    }
+    
+    .mobile-sale-container .customer-section {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    /* Remove fixed basis on mobile to avoid tall empty block */
+    .mobile-sale-container .customer-section .customer-col {
+        flex: 1 1 auto;
+        width: 100%;
+    }
+
+    /* Make the input use full width on mobile for tighter layout */
+    .mobile-sale-container .customer-input {
+        width: 100%;
+    }
+    
+    .mobile-sale-container .product-input-grid {
+        grid-template-columns: repeat(3, 1fr)
+    }
+    
+   
+    .mobile-sale-container .product-input-field {
+        width: 200px;
+    }
+    
+.mobile-sale-container .product-input-field input.smallInput {
+    width: 150px;
+}
+
+.mobile-sale-container .product-input-field input[name="productname"] {
+    width: 250px;
+}
+   
+    
+    .mobile-sale-container .action-buttons {
+        justify-content: center;
+    }
+    
+    .mobile-sale-container {
+        padding: 0px;
+    }
+    .mobile-sale-container .table-wrapper {
+        max-height: 400px; /* Set maximum height for the table wrapper */
+        overflow-y: auto; /* Enable vertical scrolling */
+        overflow-x: auto; /* Horizontal scroll if needed */
+        -webkit-overflow-scrolling: touch; /* Momentum scrolling on iOS */
+      }
+      
+      .mobile-sale-container .table-wrapper table {
+        width: 100%; /* Ensure the table takes the full width of its container */
+        min-width: 720px; /* Keep columns readable; enables horizontal scroll */
+        border-collapse: collapse; /* Collapse border spacing */
+        table-layout: fixed; /* Prevent layout jumps */
+      }
+      
+      .mobile-sale-container .table-wrapper th,
+      .mobile-sale-container .table-wrapper td {
+        border: 1px solid #ddd; /* Add border to cells */
+        padding: 4px; /* Add padding to cells */
+        text-align: left; /* Align text to the left */
+        white-space: nowrap; /* Prevent wrapping in tight columns */
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      
+      .mobile-sale-container .table-wrapper th {
+        background-color: #f2f2f2; /* Add background color to header cells */
+        position: sticky;
+        top: 0;
+        z-index: 1;
+      }
+}
+
+@media (max-width: 480px) {
+       .mobile-sale-container .action-button {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+    .mobile-sale-container .table-wrapper {
+        max-height: 300px;
+        max-width: 350px;
+        overflow-y: auto; 
+        overflow-x: auto; 
+        -webkit-overflow-scrolling: touch; 
+      }
+      
+      .mobile-sale-container .table-wrapper table {
+        width: 100%; /* Ensure the table takes the full width of its container */
+        min-width: 600px; /* Keep columns readable; enables horizontal scroll */
+        border-collapse: collapse; /* Collapse border spacing */
+        table-layout: fixed; /* Prevent layout jumps */
+      }
+      
+      .mobile-sale-container .table-wrapper th,
+      .mobile-sale-container .table-wrapper td {
+        border: 1px solid #ddd; /* Add border to cells */
+        padding: 3px; /* Add padding to cells */
+        text-align: left; /* Align text to the left */
+        white-space: nowrap; /* Prevent wrapping in tight columns */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 12px;
+      }
+      
+      .mobile-sale-container .table-wrapper th {
+        background-color: #f2f2f2; /* Add background color to header cells */
+        position: sticky;
+        top: 0;
+        z-index: 1;
+      }
+
+      .mobile-sale-container .table-wrapper table th:nth-child(5),
+      .mobile-sale-container .table-wrapper table td:nth-child(5),
+      .mobile-sale-container .table-wrapper table th:nth-child(6),
+      .mobile-sale-container .table-wrapper table td:nth-child(6),
+      .mobile-sale-container .table-wrapper table th:nth-child(7),
+      .mobile-sale-container .table-wrapper table td:nth-child(7),
+      .mobile-sale-container .table-wrapper table th:nth-child(8),
+      .mobile-sale-container .table-wrapper table td:nth-child(8),
+      .mobile-sale-container .table-wrapper table th:nth-child(9),
+      .mobile-sale-container .table-wrapper table td:nth-child(9),
+      .mobile-sale-container .table-wrapper table th:nth-child(11),
+      .mobile-sale-container .table-wrapper table td:nth-child(11),
+      .mobile-sale-container .table-wrapper table th:nth-child(12),
+      .mobile-sale-container .table-wrapper table td:nth-child(12),
+      .mobile-sale-container .table-wrapper table th:nth-child(13),
+      .mobile-sale-container .table-wrapper table td:nth-child(13),
+      .mobile-sale-container .table-wrapper table th:nth-child(14),
+      .mobile-sale-container .table-wrapper table td:nth-child(14) {
+        display: none;
+      }
+
+} 

@@ -1,0 +1,115 @@
+/* Receipt List Styles */
+.receipt-container {
+  padding: 16px;
+}
+
+.receipt-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.receipt-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.receipt-actions button {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+
+.receipt-actions button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 10px rgba(0,0,0,.12);
+}
+
+.receipt-filters {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+.receipt-filters input[type="date"],
+.receipt-filters select,
+.receipt-filters input[type="text"] {
+  padding: 8px 10px;
+  border: 2px solid #e5e7eb;
+  border-radius: 6px;
+  background: #fff;
+  transition: all .2s ease;
+}
+
+.receipt-filters input[type="date"]:focus,
+.receipt-filters select:focus,
+.receipt-filters input[type="text"]:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37,99,235,.12);
+}
+
+.receipt-table-wrapper {
+  margin-top: 16px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.receipt-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.receipt-table thead th {
+  background: #f3f4f6;
+  color: #374151;
+  font-weight: 700;
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.receipt-table tbody td {
+  padding: 10px;
+  border-bottom: 1px solid #f1f5f9;
+  color: #111827;
+}
+
+.receipt-table tbody tr:hover td {
+  background: #f9fafb;
+}
+
+/* Utility */
+.text-right { text-align: right; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .receipt-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .receipt-actions { width: 100%; }
+  .receipt-actions button { width: 100%; }
+  .receipt-table thead { display: none; }
+  .receipt-table tr { display: block; border-bottom: 1px solid #e5e7eb; }
+  .receipt-table td { display: flex; justify-content: space-between; padding: 10px 12px; }
+  .receipt-table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #6b7280;
+    padding-right: 10px;
+  }
+} 

@@ -1,0 +1,60 @@
+.sale-bill-container {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.bill-header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+    color: #007bff;
+}
+
+.bill-header p {
+    margin: 2px 0;
+    font-size: 0.9rem;
+}
+
+.company-logo {
+    max-width: 150px;
+    max-height: 70px;
+}
+
+.customer-details p {
+    margin: 0;
+}
+
+.products-table .table {
+    font-size: 0.9rem;
+}
+
+.bill-summary {
+    font-size: 1rem;
+}
+
+.summary-box {
+    width: 300px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.summary-item.total {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #007bff;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+.bill-footer {
+    font-style: italic;
+    color: #777;
+}

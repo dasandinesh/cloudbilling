@@ -1,0 +1,27 @@
+.table-wrapper-sale-order {
+  max-height: 400px; /* Set maximum height for the table wrapper */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.table-wrapper-sale-order table {
+  width: 100%; /* Ensure the table takes the full width of its container */
+  border-collapse: collapse; /* Collapse border spacing */
+}
+
+.table-wrapper-sale-order th,
+.table-wrapper-sale-order td {
+  border: 1px solid #ddd; /* Add border to cells */
+  padding: 2px; /* Add padding to cells */
+  text-align: left; /* Align text to the left */
+}
+
+.table-wrapper-sale-order th {
+  background-color: #f2f2f2; /* Add background color to header cells */
+}
+
+.customer-container {
+  margin-bottom: 20px;
+}
+.table-wrapper {
+  margin-top: 0;
+}

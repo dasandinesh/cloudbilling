@@ -1,0 +1,418 @@
+/* Mobile Sale Entry Container */
+.mobile-sale-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 100%;
+  margin: 10px;
+  padding: 1rem;
+}
+
+/* Main Grid Layout */
+.main-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+/* Bill Form */
+.bill-form {
+  background: #ffffff;
+  padding: 0.3rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Bill Top Section */
+.bill-top {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+/* Form Groups */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #4b5563;
+  font-size: 0.9rem;
+}
+
+/* Input Fields */
+.bill-details-input,
+.customer-input,
+.date-filter {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.bill-details-input:focus,
+.customer-input:focus,
+.date-filter:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.readonly-input {
+  background-color: #f3f4f6;
+  cursor: not-allowed;
+}
+
+/* Product Input Grid */
+.product-input-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  align-items: end;
+}
+
+/* Product List Table */
+.product-list {
+  width: 100%;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: white;
+}
+
+.sidebar-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.sidebar-table th {
+  background-color: #f3f4f6;
+  /* padding: 0.75rem 1rem; */
+  text-align: left;
+  font-weight: 600;
+  color: #374151;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.sidebar-table td {
+  /* padding: 0.75rem 1rem; */
+  border-bottom: 1px solid #e5e7eb;
+  vertical-align: middle;
+}
+
+.sidebar-table tr:last-child td {
+  border-bottom: none;
+}
+
+.sidebar-table tr:hover {
+  background-color: #f9fafb;
+}
+
+/* Buttons */
+.add-button,
+.submit-button,
+.action-button {
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.add-button {
+  background-color: #3b82f6;
+  color: white;
+  grid-column: 1 / -1;
+  margin-top: 0.5rem;
+}
+
+.add-button:hover {
+  background-color: #2563eb;
+}
+
+.add-button:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.submit-button {
+  background-color: #10b981;
+  color: white;
+}
+
+.submit-button:hover {
+  background-color: #059669;
+}
+
+.action-button {
+  background-color: #6b7280;
+  color: white;
+}
+
+.action-button:hover {
+  background-color: #4b5563;
+}
+
+/* Icon Buttons */
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  transition: all 0.2s;
+}
+
+.icon-button:hover {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+/* Sidebar */
+.sidebar {
+  background: #ffffff;
+  /* padding: 1.5rem; */
+  border-radius: 8px;
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
+}
+
+.sidebar h3 {
+  margin-top: 0;
+  margin-bottom: 0rem;
+  color: #1f2937;
+  font-size: 1.25rem;
+}
+
+.date-filter {
+  width: 100%;
+  margin-bottom: 0rem;
+}
+
+/* Bill Details Grid */
+.bill-details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-bottom: 0rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .sidebar {
+    max-height: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .bill-top {
+    grid-template-columns: 1fr;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .add-button,
+  .submit-button,
+  .action-button {
+    width: 100%;
+  }
+  
+  .product-input-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  /* Table wrapper inside the form */
+.bill-form .table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  /* margin: 1rem 0 1.25rem 0; */
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #fff;
+}
+}
+
+@media (max-width: 480px) {
+  .product-input-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .bill-details-grid {
+    grid-template-columns: 1fr;
+  }
+  /* Table wrapper inside the form */
+.bill-form .table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  /* margin: 1rem 0 1.25rem 0; */
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #fff;
+}
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.purchase-entry-container {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* Utility Classes */
+.mb-3 { margin-bottom: 1rem; }
+.mt-3 { margin-top: 1rem; }
+.text-center { text-align: center; }
+.text-muted { color: #6b7280; }
+.flex { display: flex; }
+.items-center { align-items: center; }
+.justify-between { justify-content: space-between; }
+.gap-2 { gap: 0.5rem; }
+
+/* =========================
+   PurchaseEntry Form-Only Styles
+   Scoped under .bill-form to avoid affecting other areas
+   (matches classes used in purchaseentry.js)
+========================= */
+
+/* Form wrapper heading */
+.bill-form h3 {
+  margin: 0 0 1rem 0;
+  color: #111827;
+}
+
+/* Inputs used in the form */
+.bill-form .smallInput,
+.bill-form .mediumInput,
+.bill-form .mobilevies,
+.bill-form .date {
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.bill-form .smallInput { max-width: 180px; }
+.bill-form .mediumInput { max-width: 220px; }
+
+.bill-form .smallInput:focus,
+.bill-form .mediumInput:focus,
+.bill-form .mobilevies:focus,
+.bill-form .date:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Table wrapper inside the form */
+.bill-form .table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  /* margin: 1rem 0 1.25rem 0; */
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.bill-form table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.bill-form table thead th {
+  background-color: #f3f4f6;
+  text-align: left;
+  font-weight: 600;
+  color: #374151;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  /* border-bottom: 2px solid #e5e7eb;
+  padding: 0.6rem 0.75rem; */
+}
+
+.bill-form table tbody td {
+  border-bottom: 1px solid #e5e7eb;
+  /* padding: 0.5rem 0.75rem; */
+  vertical-align: middle;
+}
+
+.bill-form table tbody tr:last-child td { border-bottom: none; }
+.bill-form table tbody tr:hover { background-color: #f9fafb; }
+
+/* Buttons used in the form */
+.bill-form .buttonb {
+  padding: 0.20rem 0.20rem;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+  font-size: 0.95rem;
+  text-align: center;
+  background-color: #3b82f6;
+  color: #fff;
+  margin: 0.25rem;
+}
+
+.bill-form .buttonb:hover { background-color: #2563eb; }
+
+/* Bill top customer section inside form */
+.bill-form .customer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.bill-form .customer-select p,
+.bill-form .customer-details h5 {
+  margin: 0 0 0.35rem 0;
+  color: #374151;
+}
+
+.bill-form .bill-to p,
+.bill-form .bill-to label {
+  margin: 0;
+  color: #4b5563;
+  font-size: 0.9rem;
+}
+
+/* Bill details grid inside form only */
+.bill-form .bill-details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Date inputs in side-by-side blocks inside form */
+.bill-form [style*="float: left"] .date { min-width: 160px; }
+
+/* Make the submit/print buttons row nicely spaced */
+.bill-form center { display: block; margin-top: 1rem; }
+
